@@ -41,7 +41,7 @@ No independent security review has been completed. Shared vaults use a common ma
 - [ ] Preserve full original user documentation
 - [ ] Review cryptography, browser bridge, sandboxing and data handling
 - [ ] Add automated tests and build verification
-- [ ] Confirm project license
+- [x] Add MIT license for original project code
 - [x] Document vulnerability reporting and contribution process
 
 ## Community
@@ -50,4 +50,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and [CHANGELO
 
 ## License
 
-Project license pending.
+Original project code is released under the [MIT License](LICENSE). Third-party dependencies and assets remain subject to their respective licenses.
