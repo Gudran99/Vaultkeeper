@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Vaultkeeper</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LOCK SCREEN ================= -->
+<section id="lock" class="screen">
+  <div class="lock-bg"></div>
+  <div class="lock-card">
+    <div class="brand-mark big" id="lockLogo"></div>
+    <h1>Vaultkeeper</h1>
+    <p class="muted" id="lockSubtitle">Enter your master password</p>
+
+    <div class="vault-picker" id="vaultPicker">
+      <button class="vault-current" id="vaultCurrent" type="button"></button>
+      <div class="vault-menu" id="vaultMenu"></div>
+    </div>
+
+    <div id="helloWrap" hidden>
+      <button class="btn primary block lg" id="helloBtn" type="button"></button>
+      <div class="divider"><span>or use master password</span></div>
+    </div>
+
+    <form id="lockForm" autocomplete="off">
+      <label class="field">
+        <span>Master password</span>
+        <div class="input-wrap">
+          <input id="masterPw" type="password" spellcheck="false" autofocus>
+          <button type="button" class="icon-btn ghost" data-toggle-pw="masterPw" title="Show"></button>
+        </div>
+      </label>
+      <div class="strength" id="masterStrength" hidden><i></i><b></b></div>
+      <label class="field" id="confirmWrap" hidden>
+        <span>Repeat master password</span>
+        <div class="input-wrap"><input id="masterPw2" type="password" spellcheck="false"></div>
+      </label>
+      <div class="caps" id="capsWarn" hidden></div>
+      <button class="btn primary block lg" id="lockSubmit" type="submit"></button>
+      <div class="form-error" id="lockError"></div>
+    </form>
+    <div class="lock-foot" id="lockFoot"></div>
+  </div>
+</section>
+
+<!-- ================= MAIN SCREEN ================= -->
+<section id="app" class="screen" hidden>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark"></div><div><b>Vaultkeeper</b><small id="vaultNameSide"></small></div></div>
+    <div class="side-scroll scroll">
+      <nav id="navMain"></nav>
+      <div class="nav-title">Categories</div>
+      <nav id="navTypes"></nav>
+      <div class="nav-title tags-title" id="tagsTitle" hidden>Tags</div>
+      <nav id="navTags"></nav>
+    </div>
+    <div class="side-foot">
+      <nav id="navTools"></nav>
+      <div class="sync-row" id="syncRow"></div>
+    </div>
+  </aside>
+
+  <section class="list-pane">
+    <div class="list-head">
+      <div class="search">
+        <span id="searchIcon"></span>
+        <input id="search" placeholder="Search vault…" spellcheck="false">
+        <kbd>Ctrl K</kbd>
+      </div>
+      <button class="btn primary" id="btnNew"></button>
+    </div>
+    <div class="list-sub">
+      <div><b id="listTitle">All items</b> <span class="count" id="listCount"></span></div>
+      <button class="btn ghost sm" id="btnSort"></button>
+    </div>
+    <div class="list scroll" id="list" tabindex="0"></div>
+  </section>
+
+  <main class="detail scroll" id="detail"></main>
+</section>
+
+<!-- ================= MINI MODE (quick login) ================= -->
+<section id="mini" class="screen" hidden></section>
+
+<!-- ================= QUICK SEARCH (global hotkey) ================= -->
+<section id="quick" class="screen" hidden></section>
+
+<div id="modalRoot"></div>
+<div id="menuRoot"></div>
+<div id="toasts"></div>
+
+<script src="icons.js"></script>
+<script src="types.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
