@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.svg" alt="Vaultkeeper — local-first password and 2FA manager" width="100%"></p>
+
 # Vaultkeeper
 
 **Local-first password and two-factor authentication manager for Windows and Linux.**
@@ -15,7 +17,7 @@
 
 ## Getting started
 
-Once the source is uploaded, Windows users can install Python 3.13 and run `build_exe.bat` to build `dist/Vaultkeeper.exe`. Microsoft Edge WebView2 is required.
+Windows users can install Python 3.13 and run `build_exe.bat` to build `dist/Vaultkeeper.exe`. Microsoft Edge WebView2 is required.
 
 On Linux, run `bash linux/install.sh` from the project root. Windows Hello is Windows-only; desktop integration varies under Wayland.
 
@@ -35,10 +37,16 @@ No independent security review has been completed. Shared vaults use a common ma
 
 ## Roadmap
 
-- [ ] Upload source and preserve original user documentation
+- [x] Publish source repository
+- [ ] Preserve full original user documentation
 - [ ] Review cryptography, browser bridge, sandboxing and data handling
 - [ ] Add automated tests and build verification
-- [ ] Confirm license and responsible vulnerability reporting process
+- [ ] Confirm project license
+- [x] Document vulnerability reporting and contribution process
+
+## Community
+
+See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
